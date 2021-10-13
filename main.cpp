@@ -13,5 +13,6 @@ using namespace std;
  */
 int main(int argc, char **argv) {
     Person p = *new Person("BoB");
-    Person p2("Diane");
+    cout << p.get_name() << "'s friends: \n\"";
+    cout << p.get_friend_names() << "\"" << endl;
 }

@@ -3,15 +3,10 @@
 //
 #ifndef CHAFFEY2021F_CS2G1_9_2_PERSON_H
 #define CHAFFEY2021F_CS2G1_9_2_PERSON_H
+#include <vector>
 
 using namespace std;
 
-//#include <collection.h>
-//#include <algorithm>
-// #include <string>
-//using namespace Platform;
-//using namespace Platform::Collections;
-//using namespace Windows::Foundation::Collections;
 /*
  * Notes(s)
  *  Storing the list of names as a string is a bad idea. What if two instances
@@ -28,11 +23,14 @@ public:
     string get_name(){return name;}
 private:
     string name;
-    //Vector<Person> friends = new Vector<Person>();
+    vector<Person> friends;
+    string build_namestring();
 };
 
+/*
+ * Deconstructor. Unused but good code practice
+ */
 Person::~Person(){
-    //delete friends;
 }
 
 #endif //CHAFFEY2021F_CS2G1_9_2_PERSON_H
