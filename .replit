@@ -1,2 +1,0 @@
-language = "cpp"
-run = "g++ main.cpp -o 9_2.exe && ./9_2.exe"
