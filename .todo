@@ -1,0 +1,9 @@
+Ask instructor how to handle:
+
+    befriend(Person new_friend), when:
+        new_friend is this person
+        new_friend shares this person's name
+        new_friend's name is already in friend_names
+
+    unfriend(ex_friend), when:
+        ex_friend does not exist in friend_names

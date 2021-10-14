@@ -4,7 +4,7 @@
 #ifndef CHAFFEY2021F_CS2G1_9_2_PERSON_H
 #define CHAFFEY2021F_CS2G1_9_2_PERSON_H
 #include <vector>
-
+#include <iostream>
 using namespace std;
 
 /*
@@ -21,10 +21,10 @@ public:
     void unfriend(Person ex_friend);
     string get_friend_names();
     string get_name(){return name;}
+    void printPerson();
 private:
     string name;
-    vector<Person> friends;
-    string build_namestring();
+    string friend_names;
 };
 
 /*
