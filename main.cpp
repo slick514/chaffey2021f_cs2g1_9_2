@@ -1,4 +1,4 @@
-#include "person.cpp"
+#include "person.h"
 
 void printPeople(vector<Person> &people);
 void do_tests();
@@ -48,8 +48,8 @@ vector<Person> get_3_people() {
 }
 
 void printPeople(vector<Person> &people) {
-    for(int i = 0; i < people.size(); i++){
-        people[i].printPerson();
+    for(auto & i : people){
+        i.printPerson();
     }
     cout << endl;
 }

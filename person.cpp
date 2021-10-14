@@ -1,4 +1,8 @@
+#include <utility>
+#include <string>
 #include "person.h"
+
+using namespace std;
 /*
  * Prompt: A Person has a name (just a first name for simplicity) and friends.
  *
@@ -15,16 +19,17 @@
  * Note: See header file for class and function defs.
 */
 
-const string NO_FRIENDS_MSG = "This person has no friends.";
+const string NO_FRIENDS_MSG = "This person has no friends."; /* NOLINT */
 
 Person::Person(string name){
-    this->name = name;
+    this->name = move(name);
 }
 
 
 string Person::get_friend_names() {
     return this->friend_names;
 }
+
 
 /*
  * (At the moment) we are not checking for duplicates. Just adding names to
@@ -39,6 +44,7 @@ void Person::befriend(Person new_friend) {
         this->friend_names.append(" ");
     this->friend_names.append(new_friend.get_name());
 }
+
 
 /*
  * FIFO

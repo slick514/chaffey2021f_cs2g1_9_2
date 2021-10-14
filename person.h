@@ -1,5 +1,5 @@
 //
-// Created by justi on 10/13/2021.
+// Created by Justin Gries on 10/13/2021.
 //
 #ifndef CHAFFEY2021F_CS2G1_9_2_PERSON_H
 #define CHAFFEY2021F_CS2G1_9_2_PERSON_H
@@ -30,7 +30,6 @@ private:
 /*
  * Deconstructor. Unused but good code practice
  */
-Person::~Person(){
-}
+Person::~Person()= default;
 
 #endif //CHAFFEY2021F_CS2G1_9_2_PERSON_H
