@@ -31,6 +31,7 @@ string Person::get_friend_names() {
  * the end of friend_names.
  * todo: Ask instructor how to handle:
  *      new_friend = self
+ *      new_friend shares this person's name
  *      new_friend.get_name() already in friend_names
  */
 void Person::befriend(Person new_friend) {
