@@ -33,7 +33,7 @@ void do_tests(){
     cout << "...done testing" << endl;
 }
 
-/*  Clue-code:
+/*  Clue-code: adding a friend
  *  vector<Person> people = get_3_people();
     Person *p1 = &people[1];
     Person *p2= &people[1];
