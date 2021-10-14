@@ -21,6 +21,7 @@ int main(int argc, char **argv) {
 
 // todo: complete class testing
 void do_tests(){
+    cout << "testing..." << endl;
 //    test_create_person();
 //    test_add_friend();
 //    test_add_multiple_friends();
@@ -29,6 +30,7 @@ void do_tests(){
 //    test_remove_friend_from_end();
 //    test_add_duplicate();
 //    test_remove_duplicate();
+    cout << "...done testing" << endl;
 }
 
 /*  Clue-code:
