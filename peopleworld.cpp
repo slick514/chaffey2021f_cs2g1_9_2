@@ -63,7 +63,9 @@ void PeopleWorld::do_people_world() {
                 break;
             }
             case CHOICE_VIEW_PEOPLE: {
+                cout << endl;
                 world.display_people();
+                cout << endl;
                 break;
             }
             case CHOICE_QUIT:
@@ -147,6 +149,8 @@ bool PeopleWorld::find_person(const string &person_name, Person **ppPerson) {
 }
 
 void PeopleWorld::display_people() {
+    cout << LINE_SEPARATOR << endl;
+    cout << "Here are all the people:" << endl;
     for(const Person *p : this->people)
         p->print_person();
 }
