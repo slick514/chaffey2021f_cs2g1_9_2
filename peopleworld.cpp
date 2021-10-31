@@ -113,9 +113,7 @@ char PeopleWorld::get_choice_from_user(string &name1, string &name2) {
 
 void PeopleWorld::add_person(const string &person_name) {
     auto *pPerson = new Person(person_name);
-    cout << "person instantiated: '"<< pPerson->get_name() <<"'" << endl;
     this->people.push_back(pPerson);
-    cout << "Number of people is now " << this->people.size() << endl;
     for(const Person *p : this->people){
         p->print_person();
     }
