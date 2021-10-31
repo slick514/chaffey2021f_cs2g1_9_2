@@ -5,31 +5,64 @@
 #define CHAFFEY2021F_CS2G1_9_2_PERSON_H
 #include <vector>
 #include <iostream>
-using namespace std;
 
-/*
- * Notes(s)
- *  Storing the list of names as a string is a bad idea. What if two instances
- *  of Person have the same name? Would be better to store as a Vector of
- *  Person objects.
+const std::string NO_FRIENDS_MSG = "This person has no friends."; /* NOLINT */
+
+/**
+ * Prompt: A Person has a name (just a first name for simplicity) and friends.
+ *
+ *  Store the names of the friends in a std::string, separated by spaces.
+ *
+ *  Provide a constructor that constructs a person with a given name
+ *  and no friends.
+ *
+ *  Provide member functions:
+ *      void befriend(Person p)
+ *      void unfriend(Person p)
+ *      std::string get_friend_names()
+ *
+ * Note: See header file for class and function defs.
  */
 class Person {
 public:
-    explicit Person(string name);
-    ~Person();
-    void befriend(Person new_friend);
-    void unfriend(Person ex_friend);
-    string get_friend_names();
-    string get_name(){return name;}
-    void printPerson();
-private:
-    string name;
-    string friend_names;
-};
+    /**
+     * Instantiates a person, with a name and no friends
+     * @param name The person's name
+     */
+    explicit Person(const std::string &name);
 
-/*
- * Deconstructor. Unused but good code practice
- */
-Person::~Person()= default;
+    /**
+     * We are considering names to be unique identifiers
+     * @param new_friend Person object representing new friend
+     */
+    void befriend(const Person &new_friend);
+
+    /**
+     * removes the ex_friend from this person's friends
+     * @param ex_friend
+     */
+    void unfriend(const Person &ex_friend);
+
+    /**
+     *
+     * @return A list of this person's friends
+     */
+    std::string get_friend_names() const;
+
+    /**
+     *
+     * @return this person's name
+     */
+    std::string get_name() const ;
+
+    /**
+     * Displays this person's name and friends
+     */
+    void print_person() const;
+
+private:
+    std::string name;
+    std::string friend_names;
+};
 
 #endif //CHAFFEY2021F_CS2G1_9_2_PERSON_H

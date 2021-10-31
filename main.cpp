@@ -1,8 +1,8 @@
-#include "person.h"
+#include "peopleworld.h"
 
-void printPeople(vector<Person> &people);
-void do_tests();
-vector<Person> get_3_people();
+
+
+std::vector<std::string> build_main_menu_options();
 
 using namespace std;
 /*
@@ -12,44 +12,9 @@ using namespace std;
  * Coder: Justin Gries
  * Tester(s):
  *
- * Prompt: See "person.cpp"
+ * Prompt: See "person.h"
  *
  */
 int main(int argc, char **argv) {
-    do_tests();
-}
-
-// todo: complete class testing
-void do_tests(){
-    cout << "testing..." << endl;
-//    test_create_person();
-//    test_add_friend();
-//    test_add_multiple_friends();
-//    test_remove_friend_from_beginning();
-//    test_remove_friend_from_middle();
-//    test_remove_friend_from_end();
-//    test_add_duplicate();
-//    test_remove_duplicate();
-    cout << "...done testing" << endl;
-}
-
-/*  Clue-code: adding a friend
- *  vector<Person> people = get_3_people();
-    Person *p1 = &people[1];
-    Person *p2= &people[1];
-    (*p2).befriend(*p1);
-    printPeople(people);
- */
-vector<Person> get_3_people() {
-    Person bob("Bob");
-    Person doug("Doug");
-    Person mike("Mike");
-    return {bob, doug, mike};
-}
-
-void printPeople(vector<Person> &people) {
-    for(auto & i : people){
-        i.printPerson();
-    }
-    cout << endl;
+    PeopleWorld::do_people_world();
 }
